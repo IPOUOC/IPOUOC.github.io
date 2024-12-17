@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Creation Screen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+
+    <!-- Botón de "Atrás" -->
+    <button onclick="window.history.back()" class="absolute top-4 left-4 bg-gray-300 text-gray-700 py-2 px-4 rounded hover:bg-gray-400">
+        <i class="fas fa-arrow-left mr-2"></i>Back
+    </button>
+
+    <div class="bg-white shadow-lg rounded-lg p-8 w-96">
+        <div class="mb-4">
+            <div class="flex justify-between">
+                <span class="font-medium">Setup</span>
+                <span class="font-medium">Tasks</span>
+                <span class="font-medium">Confirmation</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-blue-600 h-2 rounded-full" style="width: 33%;"></div>
+            </div>
+        </div>
+        <form>
+            <div class="mb-4">
+                <label for="project-name" class="block text-sm font-medium text-gray-700">Project Name</label>
+                <input type="text" id="project-name" class="mt-1 block w-full border border-gray-300 rounded-md p-2" placeholder="Enter project name" required>
+            </div>
+            <div class="mb-4">
+                <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+                <textarea id="description" class="mt-1 block w-full border border-gray-300 rounded-md p-2" rows="3" placeholder="Enter project description" required></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="deadline" class="block text-sm font-medium text-gray-700">Deadline</label>
+                <input type="date" id="deadline" class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
+            </div>
+            <div class="mb-6">
+                <label for="priority" class="block text-sm font-medium text-gray-700">Priority</label>
+                <select id="priority" class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <div class="flex justify-between">
+                <button type="button" class="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-md hover:bg-gray-400 transition duration-200">Cancel</button>
+                <button type="submit" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200">Save</button>
+            </div>
+        </form>
+
+        <!-- Botón de navegación a la siguiente página -->
+        <div class="mt-6">
+            <button onclick="location.href='task_assigment.html'" class="w-full bg-green-600 text-white font-semibold py-2 rounded-md hover:bg-green-700 transition duration-200">
+                Go to Task Assignment
+            </button>
+        </div>
+    </div>
+</body>
+</html>
